@@ -62,3 +62,17 @@ window.addEventListener("scroll", () => {
 
   lastScrollY = currentY;
 });
+
+let cards = document.querySelectorAll(".c-card a");
+
+cards.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    el.style.background = "#eff3f5";
+    el.style.transition = ".1s background-color ease-out";
+  });
+
+  el.addEventListener("mouseleave", () => {
+    el.style.background = "#fff";
+    el.style.transition = ".7s background-color ease-out";
+  });
+});
